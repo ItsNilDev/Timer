@@ -13,5 +13,6 @@ int main()
     int timetocount;
     std::cin >> timetocount;
     convertMinutesToSeconds(timetocount);
+    //added this line
 }
 

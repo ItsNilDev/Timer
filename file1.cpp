@@ -1,12 +1,12 @@
 #include <iostream>
 #include <unistd.h>
 
-int ONE_SECOND = 1000;
+int MILI_SECOND = 1000;
+int SECOND = 60;
 
 int convertMinutesToSeconds(int i)
 {
-    int MINUTE = 60;
-    i = MINUTE * i;
+    i = SECOND * i;
     return i;
 }
 
@@ -20,9 +20,8 @@ int main()
     {
         std::cout << "Time Left: " << i << std::endl;
         // MicroSeconds
-        
-        usleep(ONE_SECOND * 1000);
 
+        usleep(MILI_SECOND * 1000);
     }
 }
 

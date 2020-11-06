@@ -1,27 +1,21 @@
 #include <iostream>
 #include <unistd.h>
 
-int MILI_SECOND = 1000;
-int SECOND = 60;
-
-int convertMinutesToSeconds(int i)
-{
-    i = SECOND * i;
-    return i;
-}
+const int MILI_SECOND = 1000;
 
 int main()
 {
 
     int timetocount;
     std::cin >> timetocount;
-    int seconds = convertMinutesToSeconds(timetocount);
-    for(int i = seconds; i > 0; i--)
+    timetocount--;
+    for(; timetocount >= 0; timetocount--)
     {
-        std::cout << "Time Left: " << i << std::endl;
-        // MicroSeconds
-
-        usleep(MILI_SECOND * 1000);
+        for(int i = 59; i >= 0; i--)
+        {
+            std::cout << "Time Left: " << timetocount << ":" << i << std::endl;
+            usleep(MILI_SECOND * 1000);
+        }
     }
 }
 

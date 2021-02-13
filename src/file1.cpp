@@ -5,7 +5,7 @@ const int MILI_SECOND = 1000;
 
 int main()
 {
-    int tmetocount;
+    int timetocount;
     std::cin >> timetocount;
     timetocount--;
     for(; timetocount >= 0; timetocount--)
